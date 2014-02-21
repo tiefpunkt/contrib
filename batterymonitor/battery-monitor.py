@@ -21,6 +21,7 @@ def on_message(mosq, userdata, msg):
         return
 
     try:
+        # owntracks/username/deviceid
         prefix, username, device = msg.topic.split('/', 3)
     except:
         return
